@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <title>Carousel Component</title>
+
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+      /*  */
+      /*
+      MAIN COLOR: #087f5b
+      GREY COLOR: #343a40
+       */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        color: #343a40;
+        display: flex;
+        justify-content: center;
+        margin-top: 300px;
+      }
+      /* ------------------------ */
+      /* GENERAL STYLES */
+      /* ------------------------ */
+      .button-ch {
+        width: 45px;
+        height: 45px;
+        background-color: white;
+        border: 1px solid #087f5b;
+        border-radius: 100px;
+      }
+      .ch {
+        width: 24px;
+        height: 24px;
+        stroke: #087f5b;
+      }
+      .button-ch:hover {
+        background-color: #087f5b;
+      }
+      .button-ch:hover .ch {
+        stroke: white;
+      }
+
+      .middle {
+        display: flex;
+        gap: 10px;
+      }
+      .container {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+      }
+      /* LVHA */
+      .btn {
+        font-size: 20px;
+        background-color: white;
+        text-decoration: none;
+        border: 100px;
+        padding: 10px 17px;
+      }
+      .btn:hover {
+        background-color: #087f5b;
+        border-radius: 100px;
+        color: white;
+      }
+
+      span {
+        align-self: center;
+      }
+      .active {
+        background-color: #087f5b;
+        border-radius: 100px;
+        color: white;
+      }
+      .ch {
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <button class="button-ch">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="ch"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="middle">
+        <button class="btn">1</button>
+        <button class="btn">2</button>
+        <button class="btn active">3</button>
+        <button class="btn">4</button>
+        <button class="btn">5</button>
+        <button class="btn">6</button>
+        <span>...</span>
+        <button class="btn">23</button>
+      </div>
+      <div class="right">
+        <button class="button-ch">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="ch"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
